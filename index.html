@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemrograman Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=VT323&display=swap" rel="stylesheet">   
+    <style>
+        body {
+            background-color: #151f2e; 
+            background-image: 
+            linear-gradient(to right, #232931 1px, transparent 1px),
+            linear-gradient(to bottom, #232931 1px, transparent 1px);
+            background-size: 40px 40px; 
+        }
+
+        h1 {
+            font-family: 'VT323', monospace;
+            font-size: 70px;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            
+            /* Kunci Animasi Ketik */
+            overflow: hidden; /* Sembunyikan teks yang belum "diketik" */
+            border-right: .15em solid orange; /* Kursor ketik warna oranye */
+            white-space: nowrap; /* Teks jangan turun baris */
+            margin: 0 auto; /* Tengah-tengah */
+            letter-spacing: .15em; 
+            animation: 
+                typing 3.5s steps(40, end), /* Durasi ketik 3.5 detik */
+                blink-caret .75s step-end infinite; /* Kursor kedip */
+            max-width: fit-content; /* Biar kursornya pas di akhir teks */
+        }
+
+        /* Keyframes untuk Animasi Ketik */
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+        }
+
+        /* Keyframes untuk Kursor Kedip */
+        @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgb(255, 255, 255); }
+        }
+
+        p{
+            font-family: 'montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            gap: 8em;
+        }
+
+        .kotak{
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 700px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .kotak h3{
+            display: flex;
+            justify-content: center;
+        }
+
+        .kotak p{
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        .container2{
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            gap: 2em;
+        }
+
+        .hobi{
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 550px;
+            margin-top: 50px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .hobi h3{
+            display: flex;
+            justify-content: center;
+        }
+
+        .hobi ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            
+            margin: 30px;
+        }
+
+        .skill{
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 550px;
+            margin-top: 50px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .skill h3{
+            display: flex;
+            justify-content: center;
+        }
+
+        ul {
+            font-family: 'Montserrat', sans-serif;
+            list-style: none; 
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+        }
+
+        li {  
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        img{
+            width: 300px;
+            height: auto;
+        }   
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+
+        footer p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6); 
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hello everyone!</h1>
+
+    <div class="container">
+
+        <div class="kotak">
+            <h3>About me</h3>
+            <p>Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev. </p>
+        </div>
+    
+        <img src="image123.png" alt="">
+
+    </div>
+
+    <div class="container2">
+
+        <div class="hobi">
+            <h3>Hobi</h3>
+
+            <ul>
+                <li>Makan</li>
+                <li>Tidur</li>
+                <li>Nonton Film</li>
+            </ul>
+        </div>
+
+        <div class="skill">
+            <h3>Skill</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>SQL</li>
+                <li>UI/UX</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Arkan Afarel. Built with HTML, CSS, and VT323 & Montserrat.</p>
+    <footer>
+    
+</body>
+</html>
