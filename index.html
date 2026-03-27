@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             background-color: #151f2e; 
@@ -57,7 +58,7 @@
             display: flex;
             justify-content: center;
             align-items: top;
-            gap: 8em;
+            gap: 5em;
         }
 
         .kotak{
@@ -155,13 +156,25 @@
             justify-content: center;
         }
 
-        .hobi ul{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            
+        .hobi ul {
+            list-style: none; 
+            padding: 0;
+            display: flex; 
+            justify-content: center; 
+            gap: 100px; 
             margin: 30px;
+        }
+
+        .hobi li i{
+            font-size: 35px;
+            color: #64ffda;
+            transition: all 0.3s ease;
+        }
+
+        .hobi li:hover i{
+            transform: scale(1.5); /* Sedikit membesar saat di-hover */
+            text-shadow: 0 0 15px #64ffda, 0 0 30px rgba(100, 255, 218, 0.5);
+            color: #fff;
         }
 
         .skill{
@@ -179,23 +192,25 @@
             justify-content: center;
         }
 
-        ul {
-            font-family: 'Montserrat', sans-serif;
-            list-style: none; 
+        .skill ul {
+            list-style: none;
             padding: 0;
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            gap: 15px;
-            margin: 20px;
+            display: flex; 
+            justify-content: center; 
+            gap: 60px; 
+            margin: 30px;
         }
 
-        li {  
-            background: rgba(255, 255, 255, 0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .skill li i {
+            font-size: 40px;
+            color: #64ffda; 
+            transition: all 0.3s ease;
+        }
+
+        .skill li i:hover {
+            transform: scale(1.5);
+            text-shadow: 0 0 15px #64ffda, 0 0 30px rgba(100, 255, 218, 0.5);
+            color: #fff;
         }
 
         img{
@@ -265,9 +280,9 @@
             <h3>Hobi</h3>
 
             <ul>
-                <li>Makan</li>
-                <li>Tidur</li>
-                <li>Nonton Film</li>
+                <li><i class="fas fa-dumbbell" title="Sport"></i></li>
+                <li><i class="fas fa-palette" title="Design"></i></li>
+                <li><i class="fas fa-film" title="Watch Movie"></i></li>
             </ul>
         </div>
 
@@ -275,11 +290,11 @@
             <h3>Skill</h3>
 
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>SQL</li>
-                <li>UI/UX</li>
+                <li><i class="fab fa-html5" title="HTML5"></i></li>
+                <li><i class="fab fa-css3-alt" title="CSS3"></i></li>
+                <li><i class="fab fa-js" title="JavaScript"></i></li>
+                <li><i class="fas fa-database" title="SQL Database"></i></li>
+                <li><i class="fas fa-pencil-ruler" title="UI/UX Design"></i></li>
             </ul>
         </div>
     </div>
