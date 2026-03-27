@@ -6,7 +6,7 @@
     <title>Pemrograman Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=VT323&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Silkscreen&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #151f2e; 
@@ -17,8 +17,8 @@
         }
 
         h1 {
-            font-family: 'VT323', monospace;
-            font-size: 70px;
+            font-family: 'Silkscreen', cursive;
+            font-size: 40px;
             color: white;
             text-align: center;
             margin-top: 50px;
@@ -69,6 +69,8 @@
         }
 
         .kotak h3{
+            font-family:'Silkscreen', cursive ;
+            font-size: 25px;
             display: flex;
             justify-content: center;
         }
@@ -77,6 +79,57 @@
             display: flex;
             justify-content: center;
             margin: 30px;
+        }
+
+        
+        .stats-container {
+            margin-top: 30px; 
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+
+        .stat-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px; 
+            font-family: 'Silkscreen', cursive;
+            font-size: 1.2rem;
+        }
+
+        .stat-label {
+            width: 90px; 
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .stat-bar-outline {
+            flex-grow: 1;
+            height: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.3); 
+            border-radius: 6px;
+            margin: 0 15px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.2); 
+        }
+
+        .stat-bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.7); 
+        }
+
+        .code-fill { width: 80%; background: #64ffda; }
+        .design-fill { width: 95%; background: #64ffda; }
+        .movie-fill { width: 100%; background: #64ffda; }
+
+        .stat-value {
+            color: #64ffda;
+            width: 50px; 
+            text-align: right;
         }
 
         .container2{
@@ -97,6 +150,7 @@
         }
 
         .hobi h3{
+            font-family: 'Silkscreen', cursive;
             display: flex;
             justify-content: center;
         }
@@ -120,6 +174,7 @@
         }
 
         .skill h3{
+            font-family: 'Silkscreen', cursive;
             display: flex;
             justify-content: center;
         }
@@ -144,7 +199,7 @@
         }
 
         img{
-            width: 300px;
+            width: 350px;
             height: auto;
         }   
         
@@ -170,7 +225,34 @@
 
         <div class="kotak">
             <h3>About me</h3>
-            <p>Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev.Iam a student in university of lampung and i'm interest about about web dev. </p>
+            <p>Passionate Web Developer and UI/UX Designer based in Lampung. As a Computer Science student, I spend my time bridging the gap between aesthetic design and robust code. Whether it's wireframing in Figma or styling with CSS, I'm dedicated to creating web applications that are as beautiful as they are functional.</p>
+           
+            <div class="stats-container">
+                <div class="stat-group">
+                    <span class="stat-label">Code:</span>
+                    <div class="stat-bar-outline">
+                        <div class="stat-bar-fill code-fill"></div>
+                    </div>
+                    <span class="stat-value">80%</span>
+                </div>
+                
+                <div class="stat-group">
+                    <span class="stat-label">Design:</span>
+                    <div class="stat-bar-outline">
+                        <div class="stat-bar-fill design-fill"></div>
+                    </div>
+                    <span class="stat-value">95%</span>
+                </div>
+                
+                <div class="stat-group">
+                    <span class="stat-label">Watch movie:</span>
+                    <div class="stat-bar-outline">
+                        <div class="stat-bar-fill movie-fill"></div>
+                    </div>
+                    <span class="stat-value">100%</span>
+                </div>
+
+            </div>
         </div>
     
         <img src="image123.png" alt="">
