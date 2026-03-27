@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Silkscreen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             background-color: #151f2e; 
@@ -22,30 +22,33 @@
             font-size: 40px;
             color: white;
             text-align: center;
-            margin-top: 50px;
-            
+
+            /* Spacing atas (FIX) */
+            margin: 50px auto 0;
+
             /* Kunci Animasi Ketik */
-            overflow: hidden; /* Sembunyikan teks yang belum "diketik" */
-            border-right: .15em solid orange; /* Kursor ketik warna oranye */
-            white-space: nowrap; /* Teks jangan turun baris */
-            margin: 0 auto; /* Tengah-tengah */
+            overflow: hidden; 
+            border-right: .15em solid white; /* kursor */
+            white-space: nowrap; 
             letter-spacing: .15em; 
+
             animation: 
-                typing 3.5s steps(40, end), /* Durasi ketik 3.5 detik */
-                blink-caret .75s step-end infinite; /* Kursor kedip */
-            max-width: fit-content; /* Biar kursornya pas di akhir teks */
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+
+            max-width: fit-content;
         }
 
-        /* Keyframes untuk Animasi Ketik */
+        /* Animasi Ketik */
         @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
+            from { width: 0 }
+            to { width: 100% }
         }
 
-        /* Keyframes untuk Kursor Kedip */
+        /* Kursor Kedip */
         @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: rgb(255, 255, 255); }
+            from, to { border-color: transparent }
+            50% { border-color: white; }
         }
 
         p{
@@ -54,7 +57,7 @@
         }
 
         .container{
-            margin-top: 100px;
+            margin-top: 50px;
             display: flex;
             justify-content: center;
             align-items: top;
@@ -63,6 +66,8 @@
 
         .kotak{
             color: white;
+            background-color: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px); 
             border: 1px solid white;
             border-radius: 10px;
             width: 700px;
@@ -143,6 +148,8 @@
 
         .hobi{
             color: white;
+            background-color: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px); 
             border: 1px solid white;
             border-radius: 10px;
             width: 550px;
@@ -169,6 +176,7 @@
             font-size: 35px;
             color: #64ffda;
             transition: all 0.3s ease;
+            
         }
 
         .hobi li:hover i{
@@ -179,6 +187,8 @@
 
         .skill{
             color: white;
+            background-color: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px); 
             border: 1px solid white;
             border-radius: 10px;
             width: 550px;
@@ -219,16 +229,54 @@
         }   
         
         footer {
+            border: 1px solid white;
             text-align: center;
-            margin-top: 50px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1); 
+            margin: 50px auto;
+            width: 90%; 
+            max-width: 1130px; 
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px); 
+            padding: 20px 0;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+        }
+
+        footer h3{
+            font-family: 'Silkscreen', cursive;
+            color: white;
+            margin: 0 0 20px 0;
         }
 
         footer p {
+            color: white;
             font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.6); 
-            margin: 0;
+            font-size: 14px; 
+            margin: 0px;
+            letter-spacing: 1px;
+
+            display: block; 
+            border: none !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            font-size: 30px;
+            color: #64ffda; 
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.5);
+            text-shadow: 0 0 15px #64ffda, 0 0 30px rgba(100, 255, 218, 0.5);
+            color: #fff; 
         }
 
     </style>
@@ -240,7 +288,7 @@
 
         <div class="kotak">
             <h3>About me</h3>
-            <p>Passionate Web Developer and UI/UX Designer based in Lampung. As a Computer Science student, I spend my time bridging the gap between aesthetic design and robust code. Whether it's wireframing in Figma or styling with CSS, I'm dedicated to creating web applications that are as beautiful as they are functional.</p>
+            <p>My name Arkan Afarel you can call me Arkan, i'am passionate Web Developer and UI/UX Designer based in Lampung. As a Computer Science student, I spend my time bridging the gap between aesthetic design and robust code. Whether it's wireframing in Figma or styling with CSS, I'm dedicated to creating web applications that are as beautiful as they are functional.</p>
            
             <div class="stats-container">
                 <div class="stat-group">
@@ -300,8 +348,17 @@
     </div>
 
     <footer>
+        <h3>Let's Connect!</h3>
+
+        <div class="social-icons">
+            <a href="https://github.com/Arkanafarel" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/arkan-afarel-6b725133b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/arkn.afr/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/Arkanafr" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        </div>
+
         <p>&copy; 2026 Arkan Afarel. Built with HTML, CSS, and VT323 & Montserrat.</p>
-    <footer>
+    </footer>
     
 </body>
 </html>
